@@ -2,6 +2,8 @@ import pandas as pd
 import plotly.express as px
 import requests
 
+#pip install ipykernel
+
 # 1. Obtener los datos (Feed de las últimas 24 horas para todos los terremotos)
 url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
 data = requests.get(url).json()
@@ -21,7 +23,7 @@ for feature in data['features']:
 
 # 3. Convertir a un DataFrame de Pandas para Plotly
 df = pd.DataFrame(quakes)
-
+# 
 # 4. Crear el mapa interactivo
 fig = px.scatter_mapbox(
     df, 
