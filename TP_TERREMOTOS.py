@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.express as px
 import requests
+import tkinter
 import webview # La librería para la ventana tipo "app"
 import os
 
@@ -26,7 +27,7 @@ df = pd.DataFrame(quakes)
 fig = px.scatter_mapbox(
     df, lat="Latitud", lon="Longitud", size="Magnitud",
     color="Magnitud", hover_name="Lugar", zoom=1,
-    mapbox_style="carto-positron",
+    mapbox_style="carto-darkmatter",
     title="Terremotos - Últimas 24 Horas"
 )
 
@@ -38,6 +39,8 @@ fig.write_html(archivo_html)
 # Esto crea una ventana real en VS Code, no abre el navegador
 webview.create_window('Visor de Terremotos', archivo_html, width=1000, height=700)
 webview.start()
+
+fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0}) ##no aseguro
 
 # Opcional: Borrar el archivo temporal al cerrar
 if os.path.exists(archivo_html):
