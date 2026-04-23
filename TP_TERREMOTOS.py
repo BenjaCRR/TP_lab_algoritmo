@@ -45,7 +45,7 @@ fig.update_layout(
         'text': "Usa la rueda del ratón para hacer Zoom • Los puntos más grandes y rojos indican mayor magnitud",
         'showarrow': False,
         'xref': "paper", 'yref': "paper",
-        'x': 0.5, 'y': -0.1, # Posición abajo del mapa
+        'x': 0.5, 'y': -0.06, # Posición abajo del mapa
         'font': {'size': 12, 'color': "gray"}
     }]
 )
