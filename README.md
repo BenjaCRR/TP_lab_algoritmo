@@ -1,11 +1,15 @@
 # TP_lab_algoritmo
+Este proyecto permite ver el mapa del planeta, podes navegar en él (hacer zoom, movilizarte con el ratón etc). Lo interesante de este es que muestra los terremotos que ocurren en el mundo DE LAS ÚLTIMAS 24 HORAS. se actualiza en tiempo real y se ajusta a estos para mostrarte una buena gráfica.
 
+IMPORTANTE!
 Estos son las librerías que deberás instalar para poder correr correctamente el programa.
 
 import pandas	,En consola: pip install pandas,	    Manejo de tablas de datos, con esto leo el json de terremotos y transformo info.
 import plotly	,En consola: pip install plotly,	    Crear el mapa interactivo
 import requests	,En consola: pip install requests,	    Descargar los datos de internet (JSON)
 import webview	,En consola: pip install pywebview,     Crear la ventana de aplicación, donde escribo el mapa de ploty
+
+
 
 bitácora:
 08/04
